@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
+import Button from "../components/Button.astro";
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import billede1 from "../assets/images/billede1.jpg";
@@ -9,15 +9,17 @@ import billede3 from "../assets/images/billede3.jpg";
 import billede4 from "../assets/images/billede4.jpg";
 import Quiz from "../components/Quiz.astro";
 import pil from "../assets/images/pil.svg";
+import flasker from "../assets/images/flasker.png";
 ---
 <MainLayout title="#singleusesucks">
 	<!-- Hero -->
 	<article class="relative">
 		<Image src={billede1} alt="Plastik i naturen" class="w-full h-auto object-cover" />
 		<Image src={pil} alt="pil" class="w-[400px] h-auto absolute top-0 mt-8 left-308 right-0 mx-auto mb-20 animate-bounce" />
+		<Image src={flasker} alt="flasker" class="" />
 		<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
 			<h1 class="text-center">#SINGLEUSESUCKS</h1>
-			<h2 class="text-center text-2xl text-[var(--color-lightgrey)] md:ml-120 md:mr-120">Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.</h2>
+			<h2 class="text-center text-2xl text-primary md:ml-120 md:mr-120">Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.</h2>
 		</div>
 	</article>
 
@@ -76,9 +78,11 @@ import pil from "../assets/images/pil.svg";
 		<h3 class="md:mb-8" style="color: var(--color-secondary); font-weight: bold; font-size: 2xl;">På Valby strand d. 18.06.2025 </h3>
 		<p>Plastik er overalt i vores liv og det er ikke realistisk at tro, at vi kan klare os uden – i hvert fald ikke i den nærmeste fremtid. Tænk på den plastik, som redder liv på hospitalerne, den som er i din computer, eller din families bil.</p>
 	</div>
-	<div>
+	<div class="relative">
+		<div class="absolute top-[45%] left-[35%]">
+			<Button variant="primary" >Deltag i begivenheden</Button>
+		</div>
 		<Image src={billede4} alt="skildpadde" class="" />
-		<Button variant="primary"> </Button>
 	</div>
 </article>
 
