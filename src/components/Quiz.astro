@@ -1,77 +1,66 @@
 ---
 import { useState } from 'react';
 ---
-
-<html>
-  <head>
-    <title>Flip Card Quiz</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        flex-direction: column;
-        font-family: Arial, sans-serif;
-      }
-      .card {
-        width: 300px;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: lightblue;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 20px;
-        cursor: pointer;
-        transition: transform 0.5s;
-      }
-      .hidden {
-        display: none;
-      }
-      .buttons {
-        margin-top: 20px;
-      }
-      button {
-        padding: 10px 20px;
-        margin: 5px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="card" class="card" onclick="window.flipCard()">Click to see question</div>
-    <div class="buttons hidden" id="buttons">
-      <button onclick="window.nextQuestion()">Yes</button>
-      <button onclick="window.nextQuestion()">No</button>
-    </div>
+<head>
+  <title>Flip Card Quiz</title>
+</head>
+<body class="flex flex-col items-center justify-center h-screen bg-secondary">
+  <div
+    id="card"
+    class="font-family: var(--font-sans) text-primary md:w-[700px] md:h-[400px] flex items-center justify-center bg-secondary text-center text-2xl cursor-pointer transition-transform duration-500 hover:bg- font-sans"
+    onclick="window.flipCard()"
+  >
+    Start quizzen
+  </div>
+  <div
+    class="mt-5 hidden"
+    id="buttons"
+  >
+    <button 
+      class="font-family: var(--font-sans) px-4 py-2 mx-2 text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
+      onclick="window.nextQuestion()"
+    >
+      Ja
+    </button>
+    <button
+      class="font-family: var(--font-sans) px-4 py-2 mx-2 text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
+      onclick="window.nextQuestion()"
+    >
+      Nej
+    </button>
+  </div>
+</body>
 
     <script>
+      interface Window {
+        flipCard: () => void;
+        nextQuestion: () => void;
+      }
       const questions = [
-        "Is the sky blue?", 
-        "Do fish fly?", 
-        "Is 2+2 equal to 4?"
+        "Må man smide vatrundeler i toilettet?",
+        "Indholder snus plastik?",
+        "Ses vi på Valby strand d.18 Juni?",
       ];
       let currentQuestion = 0;
-      const card = document.getElementById("card");
-      const buttons = document.getElementById("buttons");
+      document.addEventListener("DOMContentLoaded", () => {
+        const card = document.getElementById("card");
+        const buttons = document.getElementById("buttons");
 
-      window.flipCard = function () {
-        card.innerText = questions[currentQuestion];
-        buttons.classList.remove("hidden");
-      };
-
-      window.nextQuestion = function () {
-        currentQuestion++;
-        if (currentQuestion < questions.length) {
+        window.flipCard = function () {
           card.innerText = questions[currentQuestion];
-        } else {
-          card.innerText = "Quiz completed!";
-          buttons.classList.add("hidden");
-        }
-      };
+          buttons.classList.remove("hidden");
+        };
+
+        window.nextQuestion = function () {
+          currentQuestion++;
+          if (currentQuestion < questions.length) {
+            card.innerText = questions[currentQuestion];
+          } else {
+            card.innerText = "Tak fordi du gør en forskel i verden!";
+            buttons.classList.add("hidden");
+          }
+        };
+      });
     </script>
   </body>
 </html>

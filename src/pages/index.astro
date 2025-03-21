@@ -12,7 +12,7 @@ import Quiz from "../components/Quiz.astro";
 <MainLayout title="#singleusesucks">
 	<!-- Hero -->
 	<article class="relative">
-		<Image src={billede1} alt="Plastik i naturen" class="w-full h-auto object-cover rounded-lg shadow-lg" />
+		<Image src={billede1} alt="Plastik i naturen" class="w-full h-auto object-cover" />
 		<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
 			<h1 class="text-center">#SINGLEUSESUCKS</h1>
 			<h2 class="text-center text-2xl text-[var(--color-lightgrey)] md:ml-120 md:mr-120">Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.</h2>
@@ -82,16 +82,16 @@ import Quiz from "../components/Quiz.astro";
 
 <!-- section 5 - quiz -->
  <article>
-	<div class="grid grid-cols-2">
-		<div>
-		<!-- quiz kompo -->
+	<div class="grid grid-cols-2 ">
+		<div class="md:m-64px m-40">
+			<Quiz></Quiz>
 		</div>
-	 	<div class="">
-	 		<h2>Test din viden</h2>
-			<p>Er du en plastikhelt eller en miljøsynder? Tag quizzen og test din viden! </p>
+	 	<div class="flex flex-col justify-center md:ml-32">
+	 		<h2 class="md:mb-16">Test din viden</h2>
+			<p>Er du en plastikhelt eller en miljøsynder? <br> Tag quizzen og test din viden! </p>
 		</div>
 	</div>
  </article>
 
- <Quiz></Quiz>
+
 </MainLayout>
