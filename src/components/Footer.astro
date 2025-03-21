@@ -1,10 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 import logo_plastic_change from "../assets/images/logo_plastic_change.svg";
+import snapchat from "../assets/images/snapchat.svg";
+import instagram from "../assets/images/instagram.svg";
+import facebook from "../assets/images/facebook.svg";
 ---
-<div>
+<div class="flex items-center justify-between mx-10">
     <Image src={logo_plastic_change} alt="plastic change pink logo"></Image>
-    
-
+        <div class="flex space-x-4">
+            <Image src={snapchat} alt="snapchat logo" class="w-12"></Image>
+            <Image src={instagram} alt="instagram logo" class="w-12"></Image>
+            <Image src={facebook} alt="facebook logo" class="w-12"></Image>
+        </div>
 </div>
-  
