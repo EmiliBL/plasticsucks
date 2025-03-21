@@ -8,11 +8,13 @@ import billede2 from "../assets/images/billede2.jpg";
 import billede3 from "../assets/images/billede3.jpg";
 import billede4 from "../assets/images/billede4.jpg";
 import Quiz from "../components/Quiz.astro";
+import pil from "../assets/images/pil.svg";
 ---
 <MainLayout title="#singleusesucks">
 	<!-- Hero -->
 	<article class="relative">
 		<Image src={billede1} alt="Plastik i naturen" class="w-full h-auto object-cover" />
+		<Image src={pil} alt="pil" class="w-[400px] h-auto absolute top-0 mt-8 left-308 right-0 mx-auto mb-20 animate-bounce" />
 		<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
 			<h1 class="text-center">#SINGLEUSESUCKS</h1>
 			<h2 class="text-center text-2xl text-[var(--color-lightgrey)] md:ml-120 md:mr-120">Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.</h2>
@@ -76,7 +78,7 @@ import Quiz from "../components/Quiz.astro";
 	</div>
 	<div>
 		<Image src={billede4} alt="skildpadde" class="" />
-		<button></button>
+		<Button variant="primary"> </Button>
 	</div>
 </article>
 
