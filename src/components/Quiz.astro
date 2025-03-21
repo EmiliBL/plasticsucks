@@ -1,0 +1,77 @@
+---
+import { useState } from 'react';
+---
+
+<html>
+  <head>
+    <title>Flip Card Quiz</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+      }
+      .card {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightblue;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: transform 0.5s;
+      }
+      .hidden {
+        display: none;
+      }
+      .buttons {
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card" class="card" onclick="window.flipCard()">Click to see question</div>
+    <div class="buttons hidden" id="buttons">
+      <button onclick="window.nextQuestion()">Yes</button>
+      <button onclick="window.nextQuestion()">No</button>
+    </div>
+
+    <script>
+      const questions = [
+        "Is the sky blue?", 
+        "Do fish fly?", 
+        "Is 2+2 equal to 4?"
+      ];
+      let currentQuestion = 0;
+      const card = document.getElementById("card");
+      const buttons = document.getElementById("buttons");
+
+      window.flipCard = function () {
+        card.innerText = questions[currentQuestion];
+        buttons.classList.remove("hidden");
+      };
+
+      window.nextQuestion = function () {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          card.innerText = questions[currentQuestion];
+        } else {
+          card.innerText = "Quiz completed!";
+          buttons.classList.add("hidden");
+        }
+      };
+    </script>
+  </body>
+</html>
