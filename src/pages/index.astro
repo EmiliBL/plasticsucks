@@ -60,15 +60,15 @@ import flasker from "../assets/images/flasker.png";
 		<div class="flex justify-center">
 			<Image src={billede3} alt="skildpadde" class="w-full h-auto object-cover" />
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-center h-full">
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
 			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Drop engangskrus til festerne</h3>
 			<p class="text-sm sm:text-base">Brug genanvendelige kopper i stedet for plastik</p>
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-center h-full">
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
 			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Smid ikke snus på jorden</h3>
 			<p class="text-sm sm:text-base">Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-center h-full">
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
 			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Tænk over dit tøjforbrug</h3>
 			<p class="text-sm sm:text-base">Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
 		</div>
@@ -77,7 +77,7 @@ import flasker from "../assets/images/flasker.png";
 
 <!-- Section 5 - Begivenhed -->
 <article class="grid grid-cols-1 md:grid-cols-2 gap-6">
-	<div class="m-10 md:m-40 flex flex-col justify-center">
+	<div class="m-10 md:m-40 flex flex-col justify-left">
 		<h2 class="mb-6 md:mb-16 text-lg md:text-2xl font-bold">Vær med til at rydde op!</h2>
 		<p class="mb-4 md:mb-8 text-sm md:text-base">
 			#Plasticsucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.
@@ -98,17 +98,21 @@ import flasker from "../assets/images/flasker.png";
 </article>
 
 <!-- section 5 - quiz -->
- <article>
-	<div class="grid grid-cols-2 ">
-		<div class="md:m-64px m-40">
-			<Quiz></Quiz>
+<article>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-10 md:p-20">
+		<div class="flex justify-center">
+			<div class="w-full max-w-md">
+				<Quiz />
+			</div>
 		</div>
-	 	<div class="flex flex-col justify-center md:ml-32">
-	 		<h2 class="md:mb-16">Test din viden</h2>
-			<p>Er du en plastikhelt eller en miljøsynder? <br> Tag quizzen og test din viden! </p>
+		<div class="flex flex-col justify-center text-center md:text-left">
+			<h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-4 md:mb-6">Test din viden</h2>
+			<p class="text-sm sm:text-base md:text-lg">
+				Er du en plastikhelt eller en miljøsynder? <br /> Tag quizzen og test din viden!
+			</p>
 		</div>
 	</div>
- </article>
+</article>
 
 
 </MainLayout>
