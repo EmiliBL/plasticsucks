@@ -24,65 +24,76 @@ import flasker from "../assets/images/flasker.png";
 	</article>
 
 <!-- Section 2 - skildpadde -->
- 	<article class="grid grid-cols-2">
-		<div class="flex items-center justify-center">
-			<Image src={billede2} alt="skildpadde" class="" />
-		</div>
-		<div class="md:m-64px m-40 flex flex-col justify-center">
-				<p class="mb-20">Du har sikkert set plastik ligge i naturen samt på vores gader og stræder. Det er et stort problem, fordi plastik er ekstremt slidstærkt og ikke nedbrydes naturligt over tid. <br> <br>I modsætning til materialer som pap, træ, metal, keramik og glas, der gradvist nedbrydes og genindgår i naturens kredsløb, bliver plastik liggende i miljøet i mange år og skader både dyr og økosystemer.</p>
-				<h2 class="mt-20">Plastik ophober sig i naturen & truer dyrelivet</h2>
-		</div>
- 	</article>
+<article class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	<div class="flex items-center justify-center">
+		<img src={billede2.src} alt="skildpadde" class="w-full h-auto object-cover" />
+	</div>
+	<div class="m-10 md:m-40 flex flex-col justify-center">
+		<p class="mb-10 md:mb-20 text-sm md:text-base">
+			Du har sikkert set plastik ligge i naturen samt på vores gader og stræder. Det er et stort problem, fordi plastik er ekstremt slidstærkt og ikke nedbrydes naturligt over tid. <br> <br>
+			I modsætning til materialer som pap, træ, metal, keramik og glas, der gradvist nedbrydes og genindgår i naturens kredsløb, bliver plastik liggende i miljøet i mange år og skader både dyr og økosystemer.
+		</p>
+		<h2 class="mt-10 md:mt-20 text-lg md:text-2xl font-bold">Plastik ophober sig i naturen & truer dyrelivet</h2>
+	</div>
+</article>
 
- <!-- Section 3 - Snapchat -->
-	<article class="grid grid-cols-2  bg-secondary">
-		<div class="md:m-64 m-40 md:w-[608px] ">
-			<h2 style="color: var(--color-lightgrey)">Vidste du, at plastik forværrer klimaet?</h2>
-		</div>
-		<div class="md:m-64px m-40 flex flex-col justify-center">
-			<p class="md:mb-32">Stort set al plastik (98%) er nemlig lavet af fossile brændstoffer, som olie og naturgas. Og disse indeholder rigtig store mængder drivhusgasser, som frigives, både når man brænder plastik af i forbrændingsanlæg og når man efterlader plastik på lossepladser eller i naturen. <br><br>Og så må vi ikke glemme al den co2, som bliver udledt, når vi producerer plastikprodukter og -emballager og transporterer dem til butikkerne og fra butikkerne til os forbrugere.
-			</p>
-			<h3 class="text-2xl font-bold">Følg med og lær mere på Snapchat: @Singleusesucks</h3>
-		</div>
-	</article>
+<!-- Section 3 - Snapchat -->
+<article class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-secondary p-6 sm:p-10 md:p-20">
+	<div class="flex flex-col justify-center">
+		<h2 class="text-base sm:text-lg md:text-2xl font-bold text-lightgrey">Vidste du, at plastik forværrer klimaet?</h2>
+	</div>
+	<div class="flex flex-col justify-center">
+		<p class="mb-6 sm:mb-10 md:mb-20 text-xs sm:text-sm md:text-base">
+			Stort set al plastik (98%) er nemlig lavet af fossile brændstoffer, som olie og naturgas. Og disse indeholder rigtig store mængder drivhusgasser, som frigives, både når man brænder plastik af i forbrændingsanlæg og når man efterlader plastik på lossepladser eller i naturen. <br><br>
+			Og så må vi ikke glemme al den co2, som bliver udledt, når vi producerer plastikprodukter og -emballager og transporterer dem til butikkerne og fra butikkerne til os forbrugere.
+		</p>
+		<h3 class="text-sm sm:text-base md:text-2xl font-bold">Følg med og lær mere på Snapchat: @Singleusesucks</h3>
+	</div>
+</article>
 
 <!-- section 4 - gode råd -->
- <article class="md:m-64 m-40">
+<article class="md:m-64 m-40">
 	<div class="md:mb-32">
 		<h2>Hvad kan du selv gøre?</h2>
 	</div>	
-	<div class="grid grid-cols-4 gap-6">
-		<div class="">
-			<Image src={billede3} alt="skildpadde" class="" />
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+		<div class="flex justify-center">
+			<Image src={billede3} alt="skildpadde" class="w-full h-auto object-cover" />
 		</div>
-		<div class="bg-secondary md:p-25px p-10 flex flex-col justify-center"> 
-			<h3 class="">Drop engangskrus til festerne</h3>
-			<p>Brug genanvendelige kopper i stedet for plastik</p>
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-center h-full">
+			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Drop engangskrus til festerne</h3>
+			<p class="text-sm sm:text-base">Brug genanvendelige kopper i stedet for plastik</p>
 		</div>
-		<div class="bg-secondary md:p-25px p-10 flex flex-col justify-center"> 
-			<h3>Smid ikke snus på jorden</h3>
-			<p>Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-center h-full">
+			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Smid ikke snus på jorden</h3>
+			<p class="text-sm sm:text-base">Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
 		</div>
-		<div class="bg-secondary md:p-25px p-10 flex flex-col justify-center"> 
-			<h3>Tænk over dit tøjforbrug</h3>
-			<p>Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-center h-full">
+			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Tænk over dit tøjforbrug</h3>
+			<p class="text-sm sm:text-base">Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
 		</div>
 	</div>
 </article>
 
 <!-- Section 5 - Begivenhed -->
-<article class="grid grid-cols-2">
-	<div class="md:m-64px m-40 flex flex-col justify-center">
-		<h2 class="md:mb-32">Vær med til at rydde op! </h2>
-		<p class="md:mb-8">#Plasticsucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.</p>
-		<h3 class="md:mb-8" style="color: var(--color-secondary); font-weight: bold; font-size: 2xl;">På Valby strand d. 18.06.2025 </h3>
-		<p>Plastik er overalt i vores liv og det er ikke realistisk at tro, at vi kan klare os uden – i hvert fald ikke i den nærmeste fremtid. Tænk på den plastik, som redder liv på hospitalerne, den som er i din computer, eller din families bil.</p>
+<article class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	<div class="m-10 md:m-40 flex flex-col justify-center">
+		<h2 class="mb-6 md:mb-16 text-lg md:text-2xl font-bold">Vær med til at rydde op!</h2>
+		<p class="mb-4 md:mb-8 text-sm md:text-base">
+			#Plasticsucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.
+		</p>
+		<h3 class="mb-4 md:mb-8 text-base md:text-xl font-bold text-secondary">
+			På Valby strand d. 18.06.2025
+		</h3>
+		<p class="text-sm md:text-base">
+			Plastik er overalt i vores liv og det er ikke realistisk at tro, at vi kan klare os uden – i hvert fald ikke i den nærmeste fremtid. Tænk på den plastik, som redder liv på hospitalerne, den som er i din computer, eller din families bil.
+		</p>
 	</div>
-	<div class="relative">
-		<div class="absolute top-[45%] left-[35%]">
-			<Button variant="primary" >Deltag i begivenheden</Button>
+	<div class="relative flex justify-center items-center">
+		<div class="absolute top-[45%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+			<Button variant="primary">Deltag i begivenheden</Button>
 		</div>
-		<Image src={billede4} alt="skildpadde" class="" />
+		<Image src={billede4} alt="skildpadde" class="w-full h-auto object-cover" />
 	</div>
 </article>
 
