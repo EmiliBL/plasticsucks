@@ -10,12 +10,14 @@ import billede4 from "../assets/images/billede4.jpg";
 import Quiz from "../components/Quiz.astro";
 import pil from "../assets/images/pil.svg";
 import flasker from "../assets/images/flasker.png";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
 ---
 <MainLayout title="#singleusesucks">
-	<!-- Hero -->
+<!-- Hero -->
 	<article class="relative">
 		<Image src={billede1} alt="Plastik i naturen" class="w-full h-auto object-cover" />
-		<Image src={pil} alt="pil" class="w-[200px] sm:w-[300px] md:w-[400px] h-auto absolute top-0 mt-4 sm:mt-6 md:mt-8 left-1/2 transform -translate-x-1/2 animate-bounce" />
+		<Image src={pil} alt="pil" class="w-[200px] sm:w-[300px] md:w-[400px] h-auto absolute top-0 sm:mt-[300px] md:mt-26 md:right-35 animate-bounce" />
 		<Image src={flasker} alt="flasker" class="w-full h-auto object-cover" />
 		<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-16">
 			<h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">#SINGLEUSESUCKS</h1>
@@ -24,6 +26,7 @@ import flasker from "../assets/images/flasker.png";
 			</h2>
 		</div>
 	</article>
+
 
 <!-- Section 2 - skildpadde -->
 <article class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -104,7 +107,7 @@ import flasker from "../assets/images/flasker.png";
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-10 md:p-20">
 		<div class="flex justify-center">
 			<div class="w-full max-w-md">
-				<Quiz />
+				<Quiz></Quiz>
 			</div>
 		</div>
 		<div class="flex flex-col justify-center text-center md:text-left">
