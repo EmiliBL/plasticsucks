@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from '../components/Link.astro';
+import Hero from "../components/Hero.astro";
 import { Image } from 'astro:assets';
 import billede1 from "../assets/images/billede1.jpg";
 import billede2 from "../assets/images/billede2.jpg";
@@ -10,14 +11,13 @@ import billede4 from "../assets/images/billede4.jpg";
 import Quiz from "../components/Quiz.astro";
 import pil from "../assets/images/pil.svg";
 import flasker from "../assets/images/flasker.png";
-
 ---
 <MainLayout title="#singleusesucks">
 <!-- Hero -->
-
+ <Hero></Hero>
 <article>
 	<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style={`background-image: url(${billede1.src})`}>
-			<h1 class="absolute inset-0 flex flex-col items-center justify-center text-centertext-2xl md:text-7xl lg:text-8xl font-bold text-center">#SINGLEUSESUCKS</h1>
+			<h1 class="absolute inset-0 flex flex-col items-center justify-center text-2xl md:text-7xl lg:text-8xl font-bold text-center">#SINGLEUSESUCKS</h1>
 			
 			<h2 class="text-base sm:text-sm md:text-2xl lg:text-2xl text-lightgrey text-center md:ml-100 md:mr-100 mr-16 ml-16 mt-4 sm:mt-6 md:mt-8">
 				Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening
@@ -133,10 +133,10 @@ import flasker from "../assets/images/flasker.png";
 
 </MainLayout>
 
-<script>
+<!-- <script>
 import { animate, inView } from "motion";
 
 inView(".parallaxelement", ({ target }) => {
 	animate(target, { y: [50, 500] });
 });
-</script>
+</script> -->

@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import billede1 from "../assets/images/billede1.jpg";
+import flasker from "../assets/images/flasker.png";
+---
+
+
+<article class="relative">
+  <!-- Sticky Background Image -->
+  <div class="sticky top-0 w-full h-screen z-0">
+    <Image src={billede1} alt="Hero Image" class="w-full h-screen object-cover" />
+  </div>
+
+  <!-- Flasker billede (scrolling behind the text) -->
+  <div id="flasker-container" class="absolute top-[150vh] left-0 w-full flex justify-center z-10">
+    <Image 
+      id="flaskerImage"
+      src={flasker} 
+      alt="Flasker Image" 
+      class="w-1/2 opacity-90 transition-transform duration-1000 ease-out"
+    />
+  </div>
+  
+<!-- Sticky Text (h1 and h2) -->
+<div class="sticky top-0 w-full h-screen flex justify-center items-center text-center z-20">
+  <div class="w-full">
+    <h1 class="text-2xl md:text-7xl lg:text-8xl font-bold">#SINGLEUSESUCKS</h1>
+    <h2 class="mt-4 text-base sm:text-sm md:text-2xl lg:text-2xl text-secondary mx-[30%]">
+      Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel.
+      Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.
+    </h2>
+  </div>
+</div>
+
+  <!-- Content below to enable scrolling effect -->
+  <div class="h-[150vh]"></div>
+</article>
+
+<!-- JavaScript for scroll effect -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const flaskerImage = document.getElementById("flaskerImage");
+
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      let triggerPoint = window.innerHeight * 0.5;
+
+      // Adjust flaskerImage position behind the sticky text on scroll
+      if (scrollY > triggerPoint) {
+        flaskerImage.style.transform = `translateY(-${(scrollY - triggerPoint) * 0.1}px)`;
+      } else {
+        flaskerImage.style.transform = "translateY(0)";
+      }
+    });
+  });
+</script>
