@@ -10,22 +10,71 @@ import billede4 from "../assets/images/billede4.jpg";
 import Quiz from "../components/Quiz.astro";
 import pil from "../assets/images/pil.svg";
 import flasker from "../assets/images/flasker.png";
-import Card from "../components/Card.astro";
-import Hero from "../components/Hero.astro";
+
 ---
 <MainLayout title="#singleusesucks">
 <!-- Hero -->
-	<article class="relative">
-		<Image src={billede1} alt="Plastik i naturen" class="w-full h-auto object-cover" />
-		<Image src={pil} alt="pil" class="w-[200px] sm:w-[300px] md:w-[400px] h-auto absolute top-0 sm:mt-[300px] md:mt-26 md:right-35 animate-bounce" />
-		<Image src={flasker} alt="flasker" class="w-full h-auto object-cover" />
-		<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-8 md:px-16">
-			<h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">#SINGLEUSESUCKS</h1>
-			<h2 class="text-sm sm:text-base md:text-lg lg:text-xl text-primary mt-4 sm:mt-6 md:mt-8">
+<!-- 	<article class="relative">
+		<div class="relative parallaxgrafik fullwidthsection">
+	<div class="mt-8 h-screen w-full bg-cover bg-center grid grid-cols-3 overflow-hidden" style={`background-image: url(${billede1.src});`}>
+			<div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+				<h1 class="text-2xl md:text-7xl lg:text-8xl font-bold mt-20">#SINGLEUSESUCKS</h1>
+				<h2 class="text-bold  text-base sm:text-sm md:text-2xl lg:text-2xl text-lightgrey mt-4 sm:mt-6 md:mt-8 md:ml-100 md:mr-100 mr-16 ml-16">
+					Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.
+				</h2>
+			</div>
+			<div>
+				<Image src={flasker} alt="" class="col-start-2 parallaxgrafik2 w-full h-auto object-cover"></Image>
+			</div>
+		
+			<Image src={pil} alt="pil" class="w-[200px] sm:w-[300px] md:w-[400px] h-auto absolute top-0 sm:mt-[300px] md:mt-26 md:right-35 animate-bounce" />
+		</div>
+	</article> -->
+<article>
+	<div class="flex items-center h-screen w-full bg-cover bg-center sticky top-0" style={`background-image: url(${billede1.src})`} >
+		<h1 class="text-2xl md:text-7xl lg:text-8xl font-bold w-3/4 lg:w-1/4 lg:ml-64 stickyparallax1 relative ">
+			#SINGLEUSESUCKS
+		</h1> 
+	</div>
+</article>
+
+		
+	
+<!-- 
+	<section class="parallaxgrafik fullwidthsection relative overflow-hidden">    
+		<div class="h-screen w-full bg-cover bg-center flex flex-col items-center justify-end sticky top-0" 
+			style={{ backgroundImage: `url(${billede1.src})` }}>
+	
+			
+			<h1 class="text-2xl md:text-7xl lg:text-8xl font-bold translate-y-40 parallaxgrafik1">
+				#SINGLEUSESUCKS
+			</h1> 
+	
+	
+			<h2 class="text-base sm:text-sm md:text-2xl lg:text-2xl text-lightgrey text-center translate-y-40 parallaxgrafik2 md:ml-100 md:mr-100 mr-16 ml-16 mt-4 sm:mt-6 md:mt-8 ">
 				Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.
 			</h2>
+			<Image src={flasker} alt="" class="w-1/2 h-auto object-cover translate-y-40 parallaxgrafik3" />
 		</div>
+	</section> -->
+
+	<article><!-- containeren -->
+		<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style={`background-image: url(${billede1.src})`}></div><!-- sticky elementet -->
+		<div class="relative flex justify-end"><!-- relative elementet -->
+			<div class="flex flex-col w-full h-full justify-center">
+				<div class="">
+					<h1 class="text-2xl md:text-7xl lg:text-8xl font-bold text-center">#Singleusesucks</h1>
+				</div>
+				<div class="">
+					<h2 class="text-base sm:text-sm md:text-2xl lg:text-2xl text-lightgrey text-center md:ml-100 md:mr-100 mr-16 ml-16 mt-4 sm:mt-6 md:mt-8">	Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening.
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div class="h-[100vh]"></div><!-- afstandsstykket -->
 	</article>
+
+	
 
 
 <!-- Section 2 - skildpadde -->
@@ -43,7 +92,7 @@ import Hero from "../components/Hero.astro";
 </article>
 
 <!-- Section 3 - Snapchat -->
-<article class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-secondary p-6 sm:p-10 md:p-20">
+ <article class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-secondary p-6 sm:p-10 md:p-20">
 	<div class="flex flex-col justify-center">
 		<h2 class="text-base sm:text-lg md:text-2xl font-bold text-lightgrey">Vidste du, at plastik forværrer klimaet?</h2>
 	</div>
@@ -121,3 +170,5 @@ import Hero from "../components/Hero.astro";
 
 
 </MainLayout>
+
+	
