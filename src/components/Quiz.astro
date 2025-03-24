@@ -4,31 +4,31 @@ import { useState } from 'react';
 <head>
   <title>Flip Card Quiz</title>
 </head>
-<body class="flex flex-col items-center justify-center h-screen bg-secondary">
-  <div
-    id="card"
-    class="font-family: var(--font-sans) text-primary md:w-[700px] md:h-[400px] flex items-center justify-center bg-secondary text-center text-2xl cursor-pointer transition-transform duration-500 hover:bg- font-sans"
-    onclick="window.flipCard()"
-  >
-    Start quizzen
-  </div>
-  <div
-    class="mt-5 hidden"
-    id="buttons"
-  >
-    <button 
-      class="font-family: var(--font-sans) px-4 py-2 mx-2 text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
-      onclick="window.nextQuestion()"
+<body class="flex flex-col items-center justify-center min-h-screen bg-secondary">
+    <div
+        id="card"
+        class="font-family: var(--font-sans) text-primary w-[90%] max-w-[700px] h-[200px] md:h-[400px] flex items-center justify-center bg-secondary text-center text-lg md:text-2xl cursor-pointer transition-transform duration-500 hover:bg- font-sans"
+        onclick="window.flipCard()"
     >
-      Ja
-    </button>
-    <button
-      class="font-family: var(--font-sans) px-4 py-2 mx-2 text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
-      onclick="window.nextQuestion()"
+        Start quizzen
+    </div>
+    <div
+        class="mt-5 hidden"
+        id="buttons"
     >
-      Nej
-    </button>
-  </div>
+        <button 
+            class="font-family: var(--font-sans) px-4 py-2 mx-2 text-sm md:text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
+            onclick="window.nextQuestion()"
+        >
+            Ja
+        </button>
+        <button
+            class="font-family: var(--font-sans) px-4 py-2 mx-2 text-sm md:text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
+            onclick="window.nextQuestion()"
+        >
+            Nej
+        </button>
+    </div>
 </body>
 
     <script>
