@@ -6,11 +6,11 @@ import instagram from "../assets/images/instagram.svg";
 import facebook from "../assets/images/facebook.svg";
 import Button from '../components/Button.astro';
 ---
-<div class="flex items-center justify-between mx-10 my-5">
+<div class="flex flex-wrap items-center justify-between mx-16 my-5">
     <Image src={logo_plastic_change} alt="plastic change pink logo"></Image>
-        <div class="flex space-x-4">
-            <Image src={snapchat} alt="snapchat logo" class="w-12"></Image>
-            <Image src={instagram} alt="instagram logo" class="w-12"></Image>
-            <Image src={facebook} alt="facebook logo" class="w-12"></Image>
-        </div>
+    <div class="flex space-x-4 mt-4 sm:mt-0">
+        <Image src={snapchat} alt="snapchat logo" class="w-8"></Image>
+        <Image src={instagram} alt="instagram logo" class="w-8"></Image>
+        <Image src={facebook} alt="facebook logo" class="w-8"></Image>
+    </div>
 </div>
