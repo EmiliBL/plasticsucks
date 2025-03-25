@@ -17,30 +17,32 @@ const increaseParticipants = () => {
 import { Image } from 'astro:assets';
 import formularskildpadde from "../assets/images/formularskildpade.png";
 import pil_form from "../assets/images/pil_form.svg";
+import Button from '../components/Button.astro';
 ---
 <article>
-    <div class="grid grid-cols-2 bg-[var(--color-lightgrey)] relative">
-        <Image src={formularskildpadde} alt="skildpadde svømmende i havet" class="h-full max-h-195 object-cover"></Image>
-        <div class="text-black p-16">
-            <p class="pb-20">#Plasticsucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.</p>
-            <h2 class="pb-5">Vær med til at rydde op!</h2>
-                <form style="font-family: var(--font-sans-2), sans-serif;">
-                    <label class="block mb-1">For- og efternavn</label>
-                    <input type="text" placeholder="Lone Lonesen" class="w-full p-3 border border-[#ED254E] mb-4 bg-[var(--color-lightgrey)] placeholder-[var(--color-darkgrey)]"/>
-                    <label class="block font-medium mb-1">E-mail</label>
-                    <input type="email" placeholder="lonelonesen@mail.dk" class="w-full p-3 border border-[#ED254E] mb-4 bg-[var(--color-lightgrey)] placeholder-[var(--color-darkgrey)]"/>
-                    <label class="block font-medium mb-1">Telefonnummer</label>
-                    <input type="tel" placeholder="12 34 56 78" class="w-full p-3 border border-[#ED254E] mb-4 bg-[var(--color-lightgrey)] placeholder-[var(--color-darkgrey)]"/>
-                    <div class="grid grid-cols-2">
-                        <div>
-                            <label class="block font-medium mb-1">Antal deltagere</label>
-                            <input type="number" min="1" value={participants} class="w-15 p-3 border border-[#ED254E] mb-4 bg-[var(--color-lightgrey)] text-[var(--color-darkgrey)]" on:input={(e) => participants = e.target.value}/>
-                        </div>
-                        <button type="submit" class="bg-[#ED254E] text-white ml-50 my-5 font-semibold hover:bg-white hover:text-[var(--color-secondary)] transition px-4 py2">Vær med!</button>
-                    </div>
+  <div class="grid grid-cols-2 bg-[var(--color-lightgrey)] relative">
+        <div> <Image src={formularskildpadde} alt="skildpadde svømmende i havet" class="h-[700px] object-cover"></Image></div>
+      <div class="text-darkgrey">
+            <p class="p-4 text-lg">#Singleusesucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.</p>
+            <h2 class="p-4">Vær med til at rydde op!</h2>
+          <form style="font-family: var(--font-sans-2), sans-serif" class="p-4">
+              <label class="block mb-1">For- og efternavn</label>
+              <input type="text" placeholder="Lone Lonesen" class="w-full p-3 border border-secondary mb-4 bg-[var(--color-lightgrey)] placeholder-[var(--color-darkgrey)]"/>
+              <label class="block mb-1">E-mail</label>
+              <input type="email" placeholder="lonelonesen@mail.dk" class="w-full p-3 border  border-secondary mb-4 bg-[var(--color-lightgrey)] placeholder-[var(--color-darkgrey)]"/>
+              <label class="block font-medium mb-1">Telefonnummer</label>
+              <input type="tel" placeholder="12 34 56 78" class="w-full p-3 border  border-secondary mb-4 bg-[var(--color-lightgrey)] placeholder-[var(--color-darkgrey)]"/>
+          <div class="grid grid-cols-2">
+            <div>
+                <label class="block font-medium mb-1">Antal deltagere</label>
+                <input type="number" min="1" value={participants} class="w-15 p-3 border  border-secondary mb-4 bg-[var(--color-lightgrey)] text-[var(--color-darkgrey)]" on:input={(e) => participants = e.target.value}/>
+            </div>
+            <div class="md:mt-8">
+                <Button variant="secondary" size="small"> Vær med</Button>  
+            </div>                   
+          </div>
                 <Image src={pil_form} alt="pil" class="pl-6"></Image>
-                </form>
-        </div>
-        <span id="close-form" style="cursor: pointer; font-size: 3em; color: var(--color-darkgrey); position: absolute; top: 10px; right: 10px;" on:click={closePopup}>&times;</span>
-    </div>
+          </form>
+      </div>
+   </div>
 </article>

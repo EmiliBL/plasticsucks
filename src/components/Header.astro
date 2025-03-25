@@ -5,9 +5,9 @@ import snapchat_icon from "../assets/images/snapchat.svg";
 
 ---
 <header style="font-family: 'Helvetica', sans-serif; background-color: var(--color-primary); color: var(--color-lightgrey); padding-inline: 63px; padding-block: 16px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
-    <Image src={logo_plastic_change} alt="plastic change pink logo"></Image>
+    <a href="http://localhost:4321/"><Image src={logo_plastic_change}  alt="plastic change pink logo"></Image></a>
     <nav style="display: flex; align-items: center;">
-        <Image src={snapchat_icon} alt="Snapchat icon" style="width: 48px; margin-right: 48px;"></Image>
+        <Image class="md:w-[32px] md:h-[32px] md:mr-[24px] animate-pulse cursor-pointer"  src={snapchat_icon} alt="Snapchat icon"></Image>
         <div id="menu-toggle" style="display: flex; flex-direction: column; gap: 10px; cursor: pointer;">
             <div style="width: 10px; height: 10px; background-color: var(--color-secondary);"></div>
             <div style="width: 10px; height: 10px; background-color: var(--color-secondary);"></div>
@@ -17,9 +17,8 @@ import snapchat_icon from "../assets/images/snapchat.svg";
             <li style="padding: 20px; width: 100%; text-align: right;">
                 <span id="close-menu" style="cursor: pointer; font-size: 3em; color: var(--color-lightgrey); margin-right: 38px;">&times;</span>
             </li>
-            <li style="margin-bottom: 10px; width: 100%;"><a href="#home" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">Home</a></li>
-            <li style="margin-bottom: 10px; width: 100%;"><a href="#about" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">About</a></li>
-            <li style="width: 100%;"><a href="#contact" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">Contact</a></li>
+            <li style="margin-bottom: 10px; width: 100%;"><a href="http://localhost:4321/" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">Hjem</a></li>
+            <li style="margin-bottom: 10px; width: 100%;"><a href="http://localhost:4321/form" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">Formular</a></li>
         </ul>
     </nav>
 </header>
@@ -37,4 +36,9 @@ import snapchat_icon from "../assets/images/snapchat.svg";
 
     document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
     document.getElementById('close-menu').addEventListener('click', toggleMenu);
+
+
+
+
+    
 </script>

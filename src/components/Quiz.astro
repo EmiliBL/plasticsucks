@@ -4,11 +4,12 @@ import { useState } from 'react';
 <head>
   <title>Flip Card Quiz</title>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-secondary">
+<body style="font-family: var(--font-sans-2), sans-serif" class=" font-family: var(--font-sans-2), sans-serif flex flex-col items-center justify-center min-h-screen bg-primary">
     <div
         id="card"
-        class="text-primary w-[90%] max-w-[700px] h-[200px] md:h-[300px] flex items-center justify-center bg-secondary text-center text-lg md:text-2xl cursor-pointer transition-transform duration-500 hover:bg- font-sans"
+        class="font-family: var(--font-sans-2), sans-serif text-secondary w-[90%] max-w-[700px] h-[200px] md:h-[300px] flex items-center justify-center bg-primary text-center text-lg md:text-2xl cursor-pointer transition-transform duration-500 hover:bg- font-sans"
         onclick="window.flipCard()"
+        style="font-family: var(--font-sans-2), sans-serif"style="font-family: var(--font-sans-2), sans-serif"
     >
         Start quizzen
     </div>
@@ -17,13 +18,13 @@ import { useState } from 'react';
         id="buttons"
     >
         <button 
-            class="font-family: var(--font-sans) px-4 py-2 mx-2 text-sm md:text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
+            style="font-family: var(--font-sans-2), sans-serif" class=" px-4 py-2 mx-2 text-sm md:text-lg border-lightgrey-2px bg-primary text-secondary cursor-pointer hover:bg-darkgrey"
             onclick="window.nextQuestion()"
         >
             Ja
         </button>
         <button
-            class="font-family: var(--font-sans) px-4 py-2 mx-2 text-sm md:text-lg border-lightgrey-2px text-secondary cursor-pointer hover:bg-darkgrey"
+           style="font-family: var(--font-sans-2), sans-serif" class="px-4 py-2 mx-2 text-sm md:text-lg border-lightgrey-2px text-secondary bg-primary cursor-pointer hover:bg-darkgrey"
             onclick="window.nextQuestion()"
         >
             Nej

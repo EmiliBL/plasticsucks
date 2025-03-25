@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
+import Button from "../components/Button.astro"; // Ensure this path is correct and the Button component exists
 import Link from '../components/Link.astro';
 import Hero from "../components/Hero.astro";
 import { Image } from 'astro:assets';
@@ -11,64 +11,51 @@ import billede4 from "../assets/images/billede4.jpg";
 import Quiz from "../components/Quiz.astro";
 import pil from "../assets/images/pil.svg";
 import flasker from "../assets/images/flasker.png";
+import Formular from '../components/Formular.astro';
+import 'animate.css';
 ---
 <MainLayout title="#singleusesucks">
 <!-- Hero -->
  <Hero></Hero>
-<article>
-	<div class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center" style={`background-image: url(${billede1.src})`}>
-			<h1 class="absolute inset-0 flex flex-col items-center justify-center text-2xl md:text-7xl lg:text-8xl font-bold text-center">#SINGLEUSESUCKS</h1>
-			
-			<h2 class="text-base sm:text-sm md:text-2xl lg:text-2xl text-lightgrey text-center md:ml-100 md:mr-100 mr-16 ml-16 mt-4 sm:mt-6 md:mt-8">
-				Hver dag ender tonsvis af plastik i naturen. Små valg i hverdagen kan gøre en kæmpe forskel. Læs med, og se, hvordan du kan være med til at stoppe plastikforurening
-			</h2>
-		</div>
-	<div class="relative">
-		<div class="flex flex-col w-full h-full justify-center items-center">
-		
-		</div>
-		<div class=" mt-6">
-			<Image src={flasker} alt="" class="parallaxelement w-3/4 mx-auto h-auto object-cover"></Image>
-		</div>
-	</div>
-		
-	<div class="h-[100vh]"></div>
-	</div>
-		<Image src={pil} alt="pil" class="w-[200px] sm:w-[300px] md:w-[400px] h-auto absolute top-0 sm:mt-[300px] md:mt-26 md:right-35 animate-bounce" />
-	</div>
-</article>
+</div>
+<Image src={pil} alt="pil" class="w-[200px] sm:w-[300px] md:w-[400px] h-auto absolute top-0 sm:mt-[300px] md:mt-32 md:right-28 animate-bounce" />
+</div>
 
 
 <!-- Section 2 - skildpadde -->
-<article class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<article class=" bg-primary grid grid-cols-1 md:grid-cols-2 gap-6 flex items-center h-screen w-full bg-cover bg-center sticky top-0 ">
 	<div class="flex items-center justify-center">
-		<img src={billede2.src} alt="skildpadde" class="w-full h-auto object-cover" />
+		<Image src={billede2} alt="skildpadde" class="object-cover md:h-[700px]"/>
 	</div>
-	<div class="m-10 md:m-40 flex flex-col justify-center">
+	<div class="m-4 md:m-16 flex flex-col justify-center">
 		<p class="mb-10 md:mb-20 text-sm md:text-base">
-			Du har sikkert set plastik ligge i naturen samt på vores gader og stræder. Det er et stort problem, fordi plastik er ekstremt slidstærkt og ikke nedbrydes naturligt over tid. <br> <br>
+			Du har sikkert set plastik ligge i naturen samt på vores gader og stræder. Det er et stort problem, fordi plastik er ekstremt slidstærkt og ikke nedbrydes naturligt over tid. 
 			I modsætning til materialer som pap, træ, metal, keramik og glas, der gradvist nedbrydes og genindgår i naturens kredsløb, bliver plastik liggende i miljøet i mange år og skader både dyr og økosystemer.
 		</p>
-		<h2 class="mt-10 md:mt-20 text-lg md:text-2xl font-bold">Plastik ophober sig i naturen & truer dyrelivet</h2>
+		<h2 class="mt-10 md:mt-20 text-lg md:text-5xl font-bold">Plastik ophober sig i naturen & truer dyrelivet</h2>
 	</div>
 </article>
 
 <!-- Section 3 - Snapchat -->
- <article class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-secondary p-6 sm:p-10 md:p-20">
+ <article class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-secondary p-6 sm:p-10 md:p-20 stickyparallax1 md:mb-200">
 	<div class="flex flex-col justify-center">
-		<h2 class="text-base sm:text-lg md:text-2xl font-bold text-lightgrey">Vidste du, at plastik forværrer klimaet?</h2>
+		<h2 class="text-base sm:text-lg md:text-5xl font-bold text-primary">Vidste du, at plastik forværrer klimaet?</h2>
 	</div>
 	<div class="flex flex-col justify-center">
-		<p class="mb-6 sm:mb-10 md:mb-20 text-xs sm:text-sm md:text-base">
-			Stort set al plastik (98%) er nemlig lavet af fossile brændstoffer, som olie og naturgas. Og disse indeholder rigtig store mængder drivhusgasser, som frigives, både når man brænder plastik af i forbrændingsanlæg og når man efterlader plastik på lossepladser eller i naturen. <br><br>
-			Og så må vi ikke glemme al den co2, som bliver udledt, når vi producerer plastikprodukter og -emballager og transporterer dem til butikkerne og fra butikkerne til os forbrugere.
+		<p class="mb-6 sm:mb-10 md:mb-20 text-xs sm:text-sm md:text-base text-primary">
+			98% plastik er lavet af fossile brændstoffer, som olie og naturgas. Disse indeholder rigtig store mængder drivhusgasser, som frigives når man brænder plastik af på forbrændingsanlæg, når man efterlader plastik på lossepladser eller i naturen. <br><br>
+			Vi må ikke glemme al den CO2, som bliver udledt, når vi producerer plastikprodukter, som emballager, der transporteres fra butik og fra butikkerne til os forbrugere.
 		</p>
 		<h3 class="text-sm sm:text-base md:text-2xl font-bold">Følg med og lær mere på Snapchat: @Singleusesucks</h3>
 	</div>
 </article>
 
+<!-- Baggrunds test -->
+<Image src={billede1} alt="flasker" class="w-full h-auto object-cover flex items-center h-screen w-full bg-cover bg-center sticky top-0" />
+
 <!-- section 4 - gode råd -->
-<article class="md:m-[64px] sm:m-[40px]">
+<article class=" stickyparallax1 bg-primary p-4">
+<div class="md:m-[64px] sm:m-[40px]">
 	<div class="md:mb-32">
 		<h2>Hvad kan du selv gøre?</h2>
 	</div>	
@@ -76,27 +63,28 @@ import flasker from "../assets/images/flasker.png";
 		<div class="flex justify-center">
 			<Image src={billede3} alt="skildpadde" class="w-full h-auto object-cover" />
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
-			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Drop engangskrus til festerne</h3>
-			<p class="text-sm sm:text-base">Brug genanvendelige kopper i stedet for plastik</p>
+		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full animate__animated animate__flipInY">
+			<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Drop engangskrus til festerne</h3>
+			<p class=" text-primary text-sm sm:text-base">Brug genanvendelige kopper i stedet for plastik</p>
 		</div>
 		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
-			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Smid ikke snus på jorden</h3>
-			<p class="text-sm sm:text-base">Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
+			<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Smid ikke snus på jorden</h3>
+			<p class="text-primary text-sm sm:text-base">Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
 		</div>
 		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
-			<h3 class="text-base sm:text-lg lg:text-xl font-bold">Tænk over dit tøjforbrug</h3>
-			<p class="text-sm sm:text-base">Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
+			<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Tænk over dit tøjforbrug</h3>
+			<p class="text-primary text-sm sm:text-base">Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
 		</div>
 	</div>
+</div>
 </article>
 
 <!-- Section 5 - Begivenhed -->
-<article class="grid grid-cols-1 md:grid-cols-2 gap-6">
-	<div class="m-10 md:m-[64px] flex flex-col justify-center">
-		<h2 class="mb-6 md:mb-16 text-lg md:text-2xl font-bold">Vær med til at rydde op!</h2>
+<article class="grid grid-cols-1 md:grid-cols-2 gap-6 stickyparallax1 bg-primary md:mb-150">
+	<div class="m-10 md:m-[64px] flex flex-col justify-center textinview">
+		<h2 class="mb-6 md:mb-16 text-lg md:text-5xl font-bold">Vær med til at rydde op!</h2>
 		<p class="mb-4 md:mb-8 text-sm md:text-base">
-			#Plasticsucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.
+			#Singleusesucks afholder oprydningsdag på Valby Strand d. 18. juni. For hvert kilo skrald, vi samler, donerer Mærsk 1.000 kr. til Plastic Change.
 		</p>
 		<h3 class="mb-4 md:mb-8 text-base md:text-xl font-bold text-secondary">
 			På Valby strand d. 18.06.2025
@@ -107,7 +95,8 @@ import flasker from "../assets/images/flasker.png";
 	</div>
 	<div class="relative flex justify-center items-center">
 		<div class="absolute top-[45%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
-			<Button variant="primary">Deltag i begivenheden</Button>
+			<a href="http://localhost:4321/form">
+			<Button variant="primary">Deltag i begivenheden</Button></a>
 		</div>
 		<Image src={billede4} alt="skildpadde" class="w-full h-auto object-cover" />
 	</div>
@@ -115,15 +104,15 @@ import flasker from "../assets/images/flasker.png";
 
 <!-- section 5 - quiz -->
 <article>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-10 md:p-20">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-10 md:p-20 textinview stickyparallax1 bg-secondary">
 		<div class="flex justify-center">
 			<div class="w-full max-w-md">
 				<Quiz></Quiz>
 			</div>
 		</div>
 		<div class="flex flex-col justify-center text-center md:text-left">
-			<h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-4 md:mb-6">Test din viden</h2>
-			<p class="text-sm sm:text-base md:text-lg">
+			<h2 class="text-lg sm:text-xl md:text-5xl font-bold mb-4 md:mb-6 text-primary">Test din viden</h2>
+			<p class="text-sm sm:text-base md:text-lg text-primary">
 				Er du en plastikhelt eller en miljøsynder? <br /> Tag quizzen og test din viden!
 			</p>
 		</div>
@@ -133,10 +122,24 @@ import flasker from "../assets/images/flasker.png";
 
 </MainLayout>
 
-<!-- <script>
-import { animate, inView } from "motion";
+<script>
+	/* Import af Motion One bibliotek */
+	import { animate, stagger, inView, scroll } from "motion";
 
-inView(".parallaxelement", ({ target }) => {
-	animate(target, { y: [50, 500] });
-});
-</script> -->
+	/* Entrance animation */
+	animate( "body", { opacity: [ 0, 1] }, { duration: 0.5 })
+
+	/* Inview - slide fra venstre og ind */
+	/* inView animation */
+	inView( ".textinview" , () =>{
+	animate( ".textinview", { x: [-2000, 0 ] }, { duration: 2 })
+	})
+
+	/* Sticky parallax */
+	scroll(animate(".stickyparallax1", { y: [-10, 0] }), {
+		target: document.querySelector(".stickyparallax1"),
+	});
+
+	
+</script>
+
