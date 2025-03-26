@@ -5,7 +5,7 @@ import snapchat_icon from "../assets/images/snapchat.svg";
 
 ---
 <header style="font-family: 'Helvetica', sans-serif; background-color: var(--color-primary); color: var(--color-lightgrey); padding-inline: 63px; padding-block: 16px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
-    <a href="http://localhost:4321/"><Image src={logo_plastic_change}  alt="plastic change pink logo"></Image></a>
+    <a href="http://localhost:4321/"><Image src={logo_plastic_change} alt="plastic change pink logo"></Image></a>
     <nav style="display: flex; align-items: center;">
         <Image class="w-[24px] h-[24px] mr-[16px] md:w-[32px] md:h-[32px] md:mr-[24px] animate-pulse cursor-pointer" src={snapchat_icon} alt="Snapchat icon"></Image>
         <div id="menu-toggle" style="display: flex; flex-direction: column; gap: 10px; cursor: pointer;">
@@ -15,13 +15,27 @@ import snapchat_icon from "../assets/images/snapchat.svg";
         </div>
         <ul id="dropdown-menu" style="list-style: none; padding: 0; margin: 0; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--color-primary); z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
             <li style="padding: 20px; width: 100%; text-align: right;">
-                <span id="close-menu" style="cursor: pointer; font-size: 3em; color: var(--color-lightgrey); margin-right: 38px;">&times;</span>
+                <span id="close-menu" style="cursor: pointer; font-size: 3em; color: var(--color-lightgrey); margin-right: 38px; transition: color 0.3s ease;" 
+                      onmouseover="this.style.color = 'var(--color-secondary)'" onmouseout="this.style.color = 'var(--color-lightgrey)'">
+                    &times;
+                </span>
             </li>
-            <li style="margin-bottom: 10px; width: 100%;"><a href="http://localhost:4321/" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">Hjem</a></li>
-            <li style="margin-bottom: 10px; width: 100%;"><a href="http://localhost:4321/form" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em;">Formular</a></li>
+            <li style="margin-bottom: 10px; width: 100%; transition: color 0.3s ease;">
+                <a href="http://localhost:4321/" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em; transition: color 0.3s ease;" 
+                   onmouseover="this.style.color = 'var(--color-secondary)'" onmouseout="this.style.color = 'var(--color-lightgrey)'">
+                    Hjem
+                </a>
+            </li>
+            <li style="margin-bottom: 10px; width: 100%; transition: color 0.3s ease;">
+                <a href="http://localhost:4321/form" style="display: block; padding: 20px; text-decoration: none; color: var(--color-lightgrey); font-size: 1.5em; transition: color 0.3s ease;" 
+                   onmouseover="this.style.color = 'var(--color-secondary)'" onmouseout="this.style.color = 'var(--color-lightgrey)'">
+                    Formular
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {

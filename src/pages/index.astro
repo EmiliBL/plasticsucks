@@ -12,6 +12,8 @@ import Quiz from "../components/Quiz.astro";
 import pil from "../assets/images/pil.svg";
 import flasker from "../assets/images/flasker.png";
 import Formular from '../components/Formular.astro';
+import skildpadde from "../assets/images/skildpadde.svg";
+import fisk from "../assets/images/fisk.svg";
 import 'animate.css';
 ---
 <MainLayout title="#singleusesucks">
@@ -24,9 +26,9 @@ import 'animate.css';
 
 <!-- Section 2 - skildpadde -->
 <article class=" bg-primary grid grid-cols-1 md:grid-cols-2 gap-6 flex items-center h-screen w-full bg-cover bg-center sticky top-0 ">
-	<div class="flex items-center justify-center">
+	<div class="relative flex items-center justify-center">
 		<Image src={billede2} alt="skildpadde" class="md:object-cover sm:h-[20px] md:h-[700px]"/>
-	</div>
+		<Image src={skildpadde} alt="skildpadde tegning" class="absolute -top-4 -left-6 md:object-contain sm:h-[20px] md:h-[800px]"/></div>
 	<div class="m-4 md:m-16 flex flex-col justify-center sm:mb-[200px]">
 		<p class="sm:mb-100 md:mb-20 text-sm md:text-base">
 			Du har sikkert set plastik ligge i naturen samt på vores gader og stræder. Det er et stort problem, fordi plastik er ekstremt slidstærkt og ikke nedbrydes naturligt over tid. 
@@ -60,21 +62,47 @@ import 'animate.css';
 		<h2>Hvad kan du selv gøre?</h2>
 	</div>	
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-		<div class="flex justify-center">
-			<Image src={billede3} alt="skildpadde" class="w-full h-auto object-cover" />
+		<div class="relative flex justify-center">
+			<Image src={billede3} alt="fisk i glas" class="w-full h-auto object-cover" />
+			<Image src={fisk} alt="fisk" class="absolute top-32 left-33 w-[31.5%] h-auto object-contain" />
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full animate__animated animate__flipInY">
-			<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Drop engangskrus til festerne</h3>
-			<p class=" text-primary text-sm sm:text-base">Brug genanvendelige kopper i stedet for plastik</p>
+		<div class="flip-card w-full aspect-square relative">
+			<div class="bg-secondary flex flex-col justify-center items-center text-left h-full flip-card-inner">
+				<!-- Front Side (A) -->
+				<div class="flip-card-front p-4 sm:p-6 lg:p-8">
+					<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Drop engangskrus til festerne</h3>
+				</div>
+				<!-- Back Side (B) -->
+				<div class="flip-card-back p-4 sm:p-6 lg:p-8">
+					<p class=" text-primary text-sm sm:text-base">Brug genanvendelige kopper i stedet for plastik</p>
+				</div>
+			</div>
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
-			<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Smid ikke snus på jorden</h3>
-			<p class="text-primary text-sm sm:text-base">Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
+		<div class="flip-card w-full aspect-square relative">
+			<div class="bg-secondary flex flex-col justify-center items-center text-left h-full flip-card-inner">
+				<!-- Front Side (A) -->
+				<div class="flip-card-front p-4 sm:p-6 lg:p-8">
+					<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Smid ikke snus på jorden</h3>
+				</div>
+				<!-- Back Side (B) -->
+				<div class="flip-card-back p-4 sm:p-6 lg:p-8">
+					<p class=" text-primary text-sm sm:text-base">Snusposer indeholder plastik og tager flere år at nedbryde. Smid dem i skraldespanden i stedet for på gaden</p>
+				</div>
+			</div>
 		</div>
-		<div class="bg-secondary p-4 sm:p-6 lg:p-8 flex flex-col justify-center items-center text-left h-full">
-			<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Tænk over dit tøjforbrug</h3>
-			<p class="text-primary text-sm sm:text-base">Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
+		<div class="flip-card w-full aspect-square relative">
+			<div class="bg-secondary flex flex-col justify-center items-center text-left h-full flip-card-inner">
+				<!-- Front Side (A) -->
+				<div class="flip-card-front p-4 sm:p-6 lg:p-8">
+					<h3 class="text-primary text-base sm:text-lg md:text-3xl lg:text-3xl font-bold">Tænk over dit tøjforbrug</h3>
+				</div>
+				<!-- Back Side (B) -->
+				<div class="flip-card-back p-4 sm:p-6 lg:p-8">
+					<p class=" text-primary text-sm sm:text-base">Tøj fra fast fashion-kæder indeholder plastik og mikroplast. Køb secondhand eller kvalitet, der holder længere</p>
+				</div>
+			</div>
 		</div>
+	
 	</div>
 </div>
 </article>
@@ -136,9 +164,22 @@ import 'animate.css';
 	})
 
 	/* Sticky parallax */
-	scroll(animate(".stickyparallax1", { y: [-10, 0] }), {
-		target: document.querySelector(".stickyparallax1"),
-	});
+	// scroll(animate(".stickyparallax1", { y: [-10, 0] }), {
+	// 	target: document.querySelector(".stickyparallax1"),
+	// });
+
+	const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+            entry.target.style.transition = "all 0.5s ease-out";
+        }
+    });
+});
+
+document.querySelectorAll(".stickyparallax1").forEach(el => observer.observe(el));
+
 	
 </script>
 
